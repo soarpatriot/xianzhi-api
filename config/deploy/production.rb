@@ -1,9 +1,9 @@
 
 set :stage, :production
-set :server_name, "api.dreamreality.cn"
+set :server_name, "api.cityhub.me"
 
 set :branch, "master"
-set :deploy_to, "/data/www/dream"
+set :deploy_to, "/data/www/xianzhi-api"
 
 set :god_pid, "#{shared_path}/tmp/pids/god.pid"
 

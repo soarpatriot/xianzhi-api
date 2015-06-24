@@ -1,11 +1,11 @@
 lock '3.4.0'
 
-set :application, "dream"
+set :application, "xianzhi-api"
 
 set :rvm_type, :user
 set :rvm_ruby_version, '2.1.5'
 
-set :repo_url, "git@github.com:soarpatriot/dream.git"
+set :repo_url, "git@github.com:soarpatriot/xianzhi-api.git"
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 set :branch, "master"
 
@@ -29,7 +29,7 @@ namespace :deploy do
 
     on roles(:app) do
       within current_path do
-        execute :bundle, "exec god start dream"
+        execute :bundle, "exec god start xianzhi-api"
       end
     end
   end
@@ -39,7 +39,7 @@ namespace :deploy do
 
     on roles(:app) do
       within current_path do
-        execute :bundle, "exec god stop dream"
+        execute :bundle, "exec god stop xianzhi-api"
       end
     end
   end
