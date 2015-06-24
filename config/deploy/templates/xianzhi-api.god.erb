@@ -14,7 +14,7 @@ require "#{app_path}/lib/god_restart_file.rb"
   God.watch do |w|
     port = "703#{id}"
 
-    w.group    = "xinazhi-api"
+    w.group    = "xianzhi-api"
     w.log      = "<%= shared_path %>/log/god.log"
 
     w.name     = "xianzhi-api-#{port}"
