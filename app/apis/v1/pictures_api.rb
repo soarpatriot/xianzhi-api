@@ -25,6 +25,7 @@ class V1::PicturesApi < Grape::API
     end
 
     desc "upload picture", {
+        entity: PictureEntity
     }
     params do
       requires :image 
@@ -37,6 +38,8 @@ class V1::PicturesApi < Grape::API
       picture.image = params[:image]
       picture.save
       error! picture.errors.full_messages.join(","), 400 unless picture.persisted?
+
+      present picture, with: PictureEntity
     end
 
    end
