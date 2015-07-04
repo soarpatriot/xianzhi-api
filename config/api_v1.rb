@@ -4,7 +4,7 @@ class ApiV1 < Grape::API
   use Rack::Cors do
     allow do
       origins '*'
-      resource '*', headers: :any, methods: [:get, :put, :post, :options, :delete]
+      resource '*', headers: :any, methods: [:get, :put, :post, :options, :delete,:head]
     end
   end
 
@@ -34,7 +34,6 @@ class ApiV1 < Grape::API
   mount V1::UserApi
   mount V1::PostsApi
   mount V1::CommentsApi
-  mount V1::DiariesApi
   mount V1::VotesApi
   mount V1::PicturesApi
   add_swagger_documentation  api_version:"v1", base_path: Settings.host
