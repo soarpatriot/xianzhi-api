@@ -42,6 +42,6 @@ class V1::PicturesApi < Grape::API
       present picture, with: PictureEntity
     end
 
-   end
+  end
 
 end

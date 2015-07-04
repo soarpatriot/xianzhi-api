@@ -2,9 +2,6 @@ class PictureEntity < Grape::Entity
   expose :id,             documentation: {required: true, type: "Integer", desc: "id"}
   expose :post_id,        documentation: {required: true, type: "Integer", desc:"post id"}
   
-  expose :image_name,        documentation: {required: true, type: "String", desc:"image name"} do | instance |
-    instance.image.filename
-  end
   expose :image_url,        documentation: {required: true, type: "String", desc:"image url"} do | instance |
     instance.image.url
   end
