@@ -1,7 +1,7 @@
 source "http://ruby.taobao.org"
 
 gem "i18n"
-gem "rest-client", "~> 1.6.7"
+gem "rest-client", '~> 1.7.3'
 gem 'httparty'
 gem 'grape'
 gem 'grape-entity'

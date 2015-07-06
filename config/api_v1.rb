@@ -36,6 +36,7 @@ class ApiV1 < Grape::API
   mount V1::CommentsApi
   mount V1::VotesApi
   mount V1::PicturesApi
+  mount V1::WeixinApi
   add_swagger_documentation  api_version:"v1", base_path: Settings.host
   # http://api.dreamreality.cn/v1/swagger_doc.json   
   #add_swagger_documentation

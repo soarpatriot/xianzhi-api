@@ -48,6 +48,11 @@ module RackTestHelpers
     last_response
   end
 
+  def data_get url, data={}
+    get url, data
+    last_response
+  end
+
 
 
   def auth_json_put url, data={}
