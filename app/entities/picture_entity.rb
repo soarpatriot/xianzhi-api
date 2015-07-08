@@ -5,6 +5,10 @@ class PictureEntity < Grape::Entity
   expose :url,        documentation: {required: true, type: "String", desc:"image url"} do | instance |
     instance.image.url
   end
+  expose :thumb_url,        documentation: {required: true, type: "String", desc:"image thumb url"} do | instance |
+    instance.image.thumb_url
+  end
+ 
   expose :name,        documentation: {required: true, type: "String", desc:"image url"} do | instance |
     instance.image.filename
   end
