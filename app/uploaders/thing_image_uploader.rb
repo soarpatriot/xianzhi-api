@@ -9,7 +9,7 @@ class ThingImageUploader < CarrierWave::Uploader::Base
   self.qiniu_secret_key    = 'cAS2sKDW35hQDahtqDJwKy9hudBoBGZEILVXXZ5o'
   self.qiniu_bucket        = 'soarpatriot'
   self.qiniu_bucket_domain = 'soarpatriot.qiniudn.com'
-  self.qiniu_bucket_private= true
+  self.qiniu_bucket_private= false
   self.qiniu_block_size    = 4*1024*1024
   self.qiniu_protocol      = "http"
   self.qiniu_can_overwrite = true
