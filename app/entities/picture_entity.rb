@@ -6,7 +6,7 @@ class PictureEntity < Grape::Entity
     instance.image.url
   end
   expose :thumb_url,        documentation: {required: true, type: "String", desc:"image thumb url"} do | instance |
-    instance.image.thumb_url
+    "#{instance.try(:image).try(:url)}-thumbnail"
   end
  
   expose :name,        documentation: {required: true, type: "String", desc:"image url"} do | instance |

@@ -22,9 +22,6 @@ class ThingImageUploader < CarrierWave::Uploader::Base
       commands
   end
 
-  def thumb_url
-     "http://#{self.qiniu_bucket_domain}/#{self.store_dir}/#{self.filename}-thumbnail"
-  end
 
   def store_dir
     "picture"
