@@ -8,7 +8,17 @@ class PictureEntity < Grape::Entity
   expose :thumb_url,        documentation: {required: true, type: "String", desc:"image thumb url"} do | instance |
     "#{instance.try(:image).try(:url)}-thumbnail"
   end
+
+  expose :delete_type,        documentation: {required: true, type: "String", desc:"image thumb url"} do | instance |
+    "DELETE"
+  end
+
+  expose :delete_url,        documentation: {required: true, type: "String", desc:"image thumb url"} do | instance |
+    "#{Settings.host}/v1/pictures/#{instance.id}"
+  end
  
+
+
   expose :name,        documentation: {required: true, type: "String", desc:"image url"} do | instance |
     instance.image.filename
   end

@@ -60,6 +60,11 @@ module RackTestHelpers
     JSON.parse last_response.body, symbolize_names: true
   end
 
+  def data_delete url, data={}
+    delete url, data 
+    last_response
+  end
+
   def auth_json_delete url, data={}
     delete url, data.merge(auth_token: current_token.value)
     JSON.parse last_response.body, symbolize_names: true

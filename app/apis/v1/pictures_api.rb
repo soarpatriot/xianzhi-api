@@ -44,7 +44,17 @@ class V1::PicturesApi < Grape::API
       files << body()
       body({files: files })
     end
+    
+    desc "delete picture",{
 
+    }
+    params do 
+      requires :id, type:Integer, desc: "id"
+    end
+    delete ":id" do 
+      picture = Picture.find(params[:id])
+      picture.destroy
+    end
   end
 
 end
