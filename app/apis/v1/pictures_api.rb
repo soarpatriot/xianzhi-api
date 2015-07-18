@@ -40,6 +40,9 @@ class V1::PicturesApi < Grape::API
       error! picture.errors.full_messages.join(","), 400 unless picture.persisted?
 
       present picture, with: PictureEntity
+      files = []
+      files << body()
+      body({files: files })
     end
 
   end
