@@ -53,6 +53,7 @@ class V1::PicturesApi < Grape::API
     end
     delete ":id" do 
       picture = Picture.find(params[:id])
+      picture.remove_image!
       picture.destroy
     end
   end
